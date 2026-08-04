@@ -1,8 +1,8 @@
 function App() {
   return (
-    <>
-      <h1>Hello Portfolio</h1>
-    </>
+    <main className="flex min-h-screen items-center justify-center bg-slate-950">
+      <h1 className="text-5xl font-bold text-cyan-400">Hello Portfolio 🚀</h1>
+    </main>
   );
 }
 
