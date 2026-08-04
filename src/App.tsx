@@ -1,14 +1,34 @@
-import Navbar from "@/components/layout/Navbar";
+import Navbar from "@/components/layout/Navbar/Navbar";
+
+import Hero from "@/sections/Hero/Hero";
+import About from "./sections/About/About";
+import Portofolio from "./sections/Portofolio/Portofolio";
+// import About from "@/sections/About/About";
+// import Experience from "@/sections/Experience/Experience";
+// import Skills from "@/sections/Skills/Skills";
+// import Footer from "@/sections/Footer/Footer";
+// import Portofolio from "./sections/Portofolio/Portofolio";
+// import Contact from "./sections/Contact/Contact";
 
 function App() {
   return (
-    <>
+    <div
+      className="
+        min-h-screen
+        bg-white
+        text-slate-900
+        transition-colors
+        duration-300
+        dark:bg-slate-950
+        dark:text-white
+      "
+    >
       <Navbar />
 
-      <main className="flex min-h-screen items-center justify-center bg-slate-950">
-        <h1 className="text-5xl font-bold text-cyan-400">Hello Portfolio 🚀</h1>
-      </main>
-    </>
+      <Hero />
+      <About />
+      <Portofolio />
+    </div>
   );
 }
 
