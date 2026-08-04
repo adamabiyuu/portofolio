@@ -1,9 +1,10 @@
-import useTheme from "@/hooks/useTheme";
-
 const Logo = () => {
-  const { theme, toggleTheme } = useTheme();
+  return (
+    <div className="flex items-center gap-2 text-lg font-bold">
+      <span className="text-slate-700 dark:text-slate-300">adamabiyuu</span>
+    </div>
+  )
 
-  return <button onClick={toggleTheme}>{theme}</button>;
 };
 
 export default Logo;

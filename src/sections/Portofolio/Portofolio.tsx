@@ -9,14 +9,18 @@ import PortfolioTabs from "./PortfolioTabs";
 import ProjectGrid from "./ProjectGrid";
 import CertificateGrid from "./CertificateGrid";
 // import CertificateGrid from "./CertificateGrid";
+import useSectionObserver from "@/hooks/useSectionObserver";
+
 
 type Tab = "projects" | "certificates";
 
 const Portofolio = () => {
+  const ref = useSectionObserver("portfolio");
+
   const [activeTab, setActiveTab] = useState<Tab>("projects");
 
   return (
-    <Section id="portfolio">
+    <Section ref={ref} id="portfolio">
       <SectionTitle title="Portfolio" />
 
       <PortfolioTabs activeTab={activeTab} onChange={setActiveTab} />
