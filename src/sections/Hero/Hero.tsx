@@ -1,12 +1,13 @@
+import Reveal from "@/components/animations/Reveal";
 import Section from "@/components/layout/Section";
+import useSectionObserver from "@/hooks/useSectionObserver";
 
 import HeroContent from "./HeroContent";
 import HeroImage from "./HeroImage";
-import useSectionObserver from "@/hooks/useSectionObserver";
 
 const Hero = () => {
   const ref = useSectionObserver("home");
-  
+
   return (
     <Section
       ref={ref}
@@ -17,6 +18,8 @@ const Hero = () => {
         min-h-screen
         items-center
         overflow-hidden
+        pt-20
+        sm:pt-24
       "
     >
       {/* Background Grid */}
@@ -30,39 +33,70 @@ const Hero = () => {
         "
       />
 
-      {/* Left Blur */}
+      {/* Left Glow */}
       <div
         className="
           absolute
           -left-40
-          top-40
+          top-24
           -z-10
-          h-96
-          w-96
+          h-72
+          w-72
           rounded-full
           bg-sky-500/20
           blur-[120px]
+
+          sm:h-80
+          sm:w-80
+
+          lg:h-96
+          lg:w-96
         "
       />
 
-      {/* Right Blur */}
+      {/* Right Glow */}
       <div
         className="
           absolute
-          right-0
+          -right-32
           top-20
           -z-10
-          h-96
-          w-96
+          h-72
+          w-72
           rounded-full
           bg-cyan-500/10
           blur-[120px]
+
+          sm:h-80
+          sm:w-80
+
+          lg:h-96
+          lg:w-96
         "
       />
 
-      <div className="grid w-full items-center gap-16 lg:grid-cols-2">
-        <HeroContent />
-        <HeroImage />
+      <div
+        className="
+    grid
+    w-full
+    items-center
+    gap-12
+
+    lg:grid-cols-2
+    lg:gap-20
+  "
+      >
+        <div className="order-1 lg:order-2">
+          <Reveal delay={0.2}>
+            <HeroImage />
+          </Reveal>
+        </div>
+
+        <div className="order-2 lg:order-1">
+          <Reveal>
+            <HeroContent />
+          </Reveal>
+        </div>
       </div>
     </Section>
   );

@@ -1,31 +1,75 @@
-import type { ReactNode } from "react";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 
-interface ButtonProps {
+import { cn } from "@/lib/cn";
+
+import Spinner from "./Spinner";
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  onClick?: () => void;
-  href?: string;
   variant?: "primary" | "secondary";
+  loading?: boolean;
 }
 
-const Button = ({ children, onClick, href, variant = "primary" }: ButtonProps) => {
-  const baseStyle = "rounded-lg px-6 py-3 font-medium transition-all duration-300";
+const Button = ({ children, variant = "primary", loading = false, className, disabled, ...props }: ButtonProps) => {
+  const baseStyle = `
+    inline-flex
+    h-12
+    items-center
+    justify-center
+    gap-2
+
+    rounded-xl
+
+    px-6
+
+    text-sm
+    font-medium
+
+    transition-all
+    duration-300
+
+    active:scale-95
+
+    disabled:pointer-events-none
+    disabled:opacity-60
+
+    focus:outline-none
+    focus:ring-2
+    focus:ring-sky-500/40
+  `;
 
   const variants = {
-    primary: "bg-sky-500 text-white hover:bg-sky-600",
-    secondary: "border border-slate-300 hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800",
+    primary: `
+      bg-sky-500
+      text-white
+
+      shadow-lg
+      shadow-sky-500/20
+
+      hover:-translate-y-0.5
+      hover:bg-sky-600
+      hover:shadow-sky-500/40
+    `,
+
+    secondary: `
+      border
+      border-slate-700
+
+      bg-transparent
+
+      text-slate-200
+
+      hover:-translate-y-0.5
+      hover:border-slate-600
+      hover:bg-slate-800
+    `,
   };
 
-  if (href) {
-    return (
-      <a href={href} className={`${baseStyle} ${variants[variant]}`}>
-        {children}
-      </a>
-    );
-  }
-
   return (
-    <button onClick={onClick} className={`${baseStyle} ${variants[variant]}`}>
-      {children}
+    <button {...props} disabled={disabled || loading} className={cn(baseStyle, variants[variant], className)}>
+      {loading && <Spinner size={16} />}
+
+      <span>{children}</span>
     </button>
   );
 };

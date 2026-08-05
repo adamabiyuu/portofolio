@@ -13,8 +13,6 @@ const Badge = ({ children }: BadgeProps) => {
         gap-2
         rounded-full
         border
-        border-slate-200
-        bg-white
         px-4
         py-2
         text-sm
@@ -23,8 +21,8 @@ const Badge = ({ children }: BadgeProps) => {
         hover:-translate-y-1
         hover:border-sky-400
         hover:shadow-lg
-        dark:border-slate-700
-        dark:bg-slate-900
+        border-slate-700
+        bg-slate-900
       "
     >
       {children}

@@ -9,15 +9,13 @@ const HeroStatus = () => {
         -translate-x-1/2
         rounded-3xl
         border
-        border-slate-200
-        bg-white/80
         p-5
         shadow-2xl
         backdrop-blur-xl
         transition-all
         duration-300
-        dark:border-slate-700
-        dark:bg-slate-900/80
+        border-slate-700
+        bg-slate-900/80
       "
     >
       <div className="flex items-center gap-3">
@@ -30,7 +28,7 @@ const HeroStatus = () => {
         <span className="font-semibold">Available for Work</span>
       </div>
 
-      <div className="mt-4 space-y-2 text-sm text-slate-500 dark:text-slate-400">
+      <div className="mt-4 space-y-2 text-sm text-slate-400">
         <p>💼 Frontend Web Developer</p>
 
         <p>📍 Indonesia</p>

@@ -2,26 +2,60 @@ import profile from "@/assets/images/profile.png";
 
 import { floatingIcons } from "@/data/floatingIcons";
 
-// import HeroStatus from "./HeroStatus";
-
 const HeroImage = () => {
   return (
-    <div className="flex justify-center lg:justify-end">
-      <div className="relative">
-        <div className="absolute inset-0 rounded-full bg-sky-500/20 blur-3xl" />
+    <div
+      className="
+        mb-10
+        flex
+        justify-center
 
+        lg:mb-0
+        lg:justify-end
+      "
+    >
+      <div className="relative">
+        {/* Glow */}
+        <div
+          className="
+            absolute
+            inset-0
+            scale-110
+            rounded-full
+            bg-sky-500/20
+            blur-3xl
+          "
+        />
+
+        {/* Photo */}
         <div
           className="
             relative
-            h-96
-            w-96
+
+            h-52
+            w-52
+
             overflow-hidden
             rounded-full
+
             border-4
             border-sky-500
-            bg-slate-200
-            shadow-2xl
-            dark:bg-slate-800
+
+            bg-slate-800
+
+            shadow-[0_0_70px_rgba(14,165,233,0.25)]
+
+            sm:h-64
+            sm:w-64
+
+            md:h-72
+            md:w-72
+
+            lg:h-80
+            lg:w-80
+
+            xl:h-96
+            xl:w-96
           "
         >
           <img
@@ -31,39 +65,55 @@ const HeroImage = () => {
               h-full
               w-full
               object-cover
-              scale-125
+              scale-110
             "
           />
         </div>
 
-        {floatingIcons.map((item, index) => {
+        {/* Floating Icons */}
+        {floatingIcons.map((item) => {
           const Icon = item.icon;
 
           return (
             <div
-              key={index}
+              key={item.color}
               className={`
                 absolute
+
                 flex
-                h-14
-                w-14
                 items-center
                 justify-center
-                rounded-2xl
+
+                h-10
+                w-10
+
+                rounded-xl
+
                 border
-                border-slate-200
-                bg-white
+                border-slate-700
+
+                bg-slate-900/90
+
                 shadow-xl
-                dark:border-slate-700
-                dark:bg-slate-900
+
+                backdrop-blur-xl
+
+                sm:h-11
+                sm:w-11
+
+                lg:h-12
+                lg:w-12
+
+                xl:h-14
+                xl:w-14
+
                 ${item.className}
               `}
             >
-              <Icon size={28} className={item.color} />
+              <Icon size={20} className={item.color} />
             </div>
           );
         })}
-        {/* <HeroStatus /> */}
       </div>
     </div>
   );

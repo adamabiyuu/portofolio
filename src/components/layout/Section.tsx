@@ -1,24 +1,42 @@
 import { forwardRef, type HTMLAttributes } from "react";
 
+import { cn } from "@/lib/cn";
+
 interface SectionProps extends HTMLAttributes<HTMLElement> {
   id: string;
 }
 
-const Section = forwardRef<HTMLElement, SectionProps>(({ id, children, className = "", ...props }, ref) => {
+const Section = forwardRef<HTMLElement, SectionProps>(({ id, children, className, ...props }, ref) => {
   return (
     <section
       ref={ref}
       id={id}
-      className={`
-          px-6
-          py-24
-          transition-colors
-          duration-300
-          ${className}
-        `}
+      className={cn(
+        `
+            w-full
+            scroll-mt-24
+            px-5
+            py-16
+
+            sm:px-6
+            sm:py-20
+
+            lg:px-8
+            lg:py-24
+          `,
+        className,
+      )}
       {...props}
     >
-      <div className="mx-auto max-w-7xl">{children}</div>
+      <div
+        className="
+            mx-auto
+            w-full
+            max-w-7xl
+          "
+      >
+        {children}
+      </div>
     </section>
   );
 });

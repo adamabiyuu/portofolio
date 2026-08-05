@@ -7,14 +7,12 @@ const useSectionObserver = (section: string) => {
   const { setActiveSection } = useActiveSection();
 
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0.2,
+    rootMargin: "-80px 0px -40% 0px",
   });
 
   useEffect(() => {
-    console.log(section, inView);
-
     if (inView) {
-      // console.log("ACTIVE:", section);
       setActiveSection(section);
     }
   }, [inView, section, setActiveSection]);

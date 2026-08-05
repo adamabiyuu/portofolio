@@ -1,33 +1,45 @@
-import Navbar from "@/components/layout/Navbar/Navbar";
+import FloatingNav from "@/components/layout/Navbar/FloatingNav";
 
 import Hero from "@/sections/Hero/Hero";
-import About from "./sections/About/About";
-import Portofolio from "./sections/Portofolio/Portofolio";
-// import About from "@/sections/About/About";
-// import Experience from "@/sections/Experience/Experience";
-// import Skills from "@/sections/Skills/Skills";
-// import Footer from "@/sections/Footer/Footer";
-// import Portofolio from "./sections/Portofolio/Portofolio";
-// import Contact from "./sections/Contact/Contact";
+import About from "@/sections/About/About";
+import Portofolio from "@/sections/Portofolio/Portofolio";
+import Experience from "@/sections/Experience/Experience";
+import Contact from "@/sections/Contact/Contact";
+import Footer from "./sections/Footer/Footer";
 
 function App() {
   return (
     <div
       className="
         min-h-screen
-        bg-white
-        text-slate-900
-        transition-colors
-        duration-300
-        dark:bg-slate-950
-        dark:text-white
+        w-full
+        overflow-x-hidden
+        bg-slate-950
+        text-white
       "
     >
-      <Navbar />
+      {/* Floating Navbar */}
+      <FloatingNav />
 
-      <Hero />
-      <About />
-      <Portofolio />
+      {/* Main Content */}
+      <main
+        className="
+          flex
+          flex-col
+        "
+      >
+        <Hero />
+
+        <About />
+
+        <Portofolio />
+
+        <Experience />
+
+        <Contact />
+
+        <Footer />
+      </main>
     </div>
   );
 }

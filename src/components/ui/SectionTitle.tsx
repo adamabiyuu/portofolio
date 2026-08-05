@@ -32,8 +32,7 @@ const SectionTitle = ({ title, subtitle }: SectionTitleProps) => {
             mx-auto
             mt-5
             max-w-2xl
-            text-slate-500
-            dark:text-slate-400
+            text-slate-400
           "
         >
           {subtitle}

@@ -21,15 +21,13 @@ const TechStack = () => {
                 justify-center
                 rounded-2xl
                 border
-                border-slate-200
-                bg-white
                 transition-all
                 duration-300
                 hover:-translate-y-2
                 hover:border-sky-400
                 hover:shadow-xl
-                dark:border-slate-700
-                dark:bg-slate-900
+                border-slate-700
+                bg-slate-900
               "
             >
               <Icon size={30} className={tech.color} />

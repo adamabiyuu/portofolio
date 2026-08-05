@@ -41,7 +41,7 @@ export const techStack = [
   {
     name: "Express.js",
     icon: SiExpress,
-    color: "dark:text-white",
+    color: "text-white",
   },
   {
     name: "MongoDB",

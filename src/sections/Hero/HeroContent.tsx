@@ -3,17 +3,86 @@ import TechStack from "./TechStack";
 
 const HeroContent = () => {
   return (
-    <div>
-      <p className="text-lg font-medium text-sky-500">Hello,</p>
+    <div
+      className="
+        flex
+        flex-col
+        items-center
+        text-center
 
-      <h1 className="mt-4 text-5xl font-bold leading-tight lg:text-7xl">I'm Adam Abiyu Febrisyam</h1>
+        lg:items-start
+        lg:text-left
+      "
+    >
+      {/* Greeting */}
+      <p
+        className="
+          text-base
+          font-medium
+          tracking-wide
+          text-sky-500
 
-      <h2 className="mt-6 text-2xl font-semibold text-slate-500 dark:text-slate-400">Frontend Web Developer</h2>
+          sm:text-lg
+        "
+      >
+        👋 Hello, I'm
+      </p>
 
-      <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">Building modern, responsive web applications with clean code and intuitive user experiences.</p>
+      {/* Name */}
+      <h1
+        className="
+          mt-4
+          text-4xl
+          font-bold
+          leading-tight
 
+          sm:text-5xl
+
+          md:text-6xl
+
+          lg:text-7xl
+        "
+      >
+        Adam Abiyu
+        <br />
+        <span className="text-sky-500">Febrisyam</span>
+      </h1>
+
+      {/* Job */}
+      <h2
+        className="
+          mt-5
+          text-lg
+          font-semibold
+          text-slate-400
+
+          sm:text-xl
+
+          md:text-2xl
+        "
+      >
+        Frontend Web Developer
+      </h2>
+
+      {/* Description */}
+      <p
+        className="
+          mt-6
+          max-w-xl
+          text-base
+          leading-8
+          text-slate-300
+
+          sm:text-lg
+        "
+      >
+        I build modern, responsive, and high-performance web applications using React, TypeScript, Tailwind CSS, and other modern technologies with a strong focus on clean code and user experience.
+      </p>
+
+      {/* Buttons */}
       <HeroButtons />
 
+      {/* Tech Stack */}
       <TechStack />
     </div>
   );

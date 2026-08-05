@@ -3,17 +3,50 @@ import SocialLinks from "./SocialLinks";
 
 const AboutContent = () => {
   return (
-    <div>
-      <h3 className="text-3xl font-bold">Hi, I'm Adam Abiyu Febrisyam.</h3>
+    <div
+      className="
+        text-center
+        lg:text-left
+      "
+    >
+      <h3
+        className="
+          text-3xl
+          font-bold
+          leading-tight
 
-      <p className="mt-6 leading-8 text-slate-600 dark:text-slate-300">
-        A frontend web developer based in Indonesia with a passion for building modern, responsive, and user-friendly web applications. I enjoy turning ideas into clean digital experiences while continuously learning and improving my skills
+          sm:text-4xl
+        "
+      >
+        Hi, I'm <span className="text-sky-500">Adam Abiyu Febrisyam</span>
+      </h3>
+
+      <p
+        className="
+          mx-auto
+          mt-6
+          max-w-2xl
+
+          text-base
+          leading-8
+          text-slate-300
+
+          sm:text-lg
+
+          lg:mx-0
+        "
+      >
+        A Frontend Web Developer based in Indonesia with a passion for building modern, responsive, and user-friendly web applications. I enjoy turning ideas into clean digital experiences while continuously learning and improving my skills
         through real-world projects.
       </p>
 
-      <AboutHighlights />
+      <div className="mt-10">
+        <AboutHighlights />
+      </div>
 
-      <SocialLinks />
+      <div className="mt-10">
+        <SocialLinks />
+      </div>
     </div>
   );
 };

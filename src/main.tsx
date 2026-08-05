@@ -1,18 +1,17 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
+import { Toaster } from "sonner";
 import "./index.css";
-import App from "./App.tsx";
-
-import ThemeProvider from "@/contexts/ThemeProvider";
-import ActiveSectionProvider from "./contexts/ActiveSectionProvider.tsx";
+import App from "./App";
+import ActiveSectionProvider from "./contexts/ActiveSectionProvider";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ThemeProvider>
-      <ActiveSectionProvider>
-        <App />
-      </ActiveSectionProvider>
-    </ThemeProvider>
+    <ActiveSectionProvider>
+      <App />
+
+      <Toaster position="top-right" richColors closeButton duration={3000} />
+    </ActiveSectionProvider>
   </StrictMode>,
 );

@@ -20,10 +20,10 @@ export const navigation: NavigationItem[] = [
     label: "Experience",
     href: "experience",
   },
-  {
-    label: "Skills",
-    href: "skills",
-  },
+  // {
+  //   label: "Skills",
+  //   href: "skills",
+  // },
   {
     label: "Contact",
     href: "contact",

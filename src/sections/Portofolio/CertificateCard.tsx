@@ -11,59 +11,130 @@ const CertificateCard = ({ certificate }: CertificateCardProps) => {
     <article
       className="
         group
+
+        flex
+        h-full
+        flex-col
+
         overflow-hidden
+
         rounded-2xl
+
         border
-        border-slate-200
-        bg-white
+        border-slate-800
+
+        bg-slate-900/50
+        backdrop-blur-sm
+
+        shadow-lg
+
         transition-all
         duration-300
+
         hover:-translate-y-2
-        hover:shadow-xl
-        dark:border-slate-800
-        dark:bg-slate-900
+        hover:border-sky-500/40
+        hover:shadow-sky-500/10
       "
     >
       {/* Preview */}
-      <div className="aspect-video overflow-hidden bg-slate-100 dark:bg-slate-800">
+      <div
+        className="
+          aspect-video
+          overflow-hidden
+          bg-slate-800
+        "
+      >
         <img
           src={certificate.image}
           alt={certificate.title}
+          loading="lazy"
+          decoding="async"
           className="
             h-full
             w-full
             object-cover
+
             transition-transform
             duration-500
+
             group-hover:scale-105
           "
         />
       </div>
 
       {/* Content */}
-      <div className="space-y-5 p-6">
-        <div>
-          <h3 className="text-xl font-semibold">{certificate.title}</h3>
+      <div
+        className="
+          flex
+          flex-1
+          flex-col
 
-          <p className="mt-2 text-sm text-slate-500">{certificate.issuer}</p>
+          p-5
+
+          sm:p-6
+        "
+      >
+        <div>
+          <h3
+            className="
+              text-xl
+              font-semibold
+
+              text-white
+            "
+          >
+            {certificate.title}
+          </h3>
+
+          <p
+            className="
+              mt-3
+
+              text-sm
+              leading-7
+
+              text-slate-300
+            "
+          >
+            {certificate.issuer}
+          </p>
         </div>
 
-        <a
-          href={certificate.credential}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            inline-flex
-            items-center
-            gap-2
-            text-sky-500
-            transition-colors
-            hover:text-sky-600
-          "
-        >
-          View Credential
-          <FaExternalLinkAlt size={12} />
-        </a>
+        <div className="mt-auto pt-6">
+          <a
+            href={certificate.credential}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              inline-flex
+              w-full
+
+              items-center
+              justify-center
+              gap-2
+
+              rounded-xl
+
+              border
+              border-slate-700
+
+              px-4
+              py-3
+
+              text-sm
+              font-medium
+
+              transition-all
+              duration-300
+
+              hover:border-sky-500/40
+              hover:bg-slate-800
+            "
+          >
+            View Credential
+            <FaExternalLinkAlt size={12} />
+          </a>
+        </div>
       </div>
     </article>
   );

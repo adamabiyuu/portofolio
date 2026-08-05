@@ -1,3 +1,5 @@
+import Reveal from "@/components/animations/Reveal";
+
 import { certificates } from "@/data/certificates";
 
 import CertificateCard from "./CertificateCard";
@@ -7,12 +9,20 @@ const CertificateGrid = () => {
     <div
       className="
         grid
-        gap-8
-        md:grid-cols-2
+
+        grid-cols-1
+
+        gap-6
+
+        sm:gap-8
+
+        lg:grid-cols-2
       "
     >
-      {certificates.map((certificate) => (
-        <CertificateCard key={certificate.id} certificate={certificate} />
+      {certificates.map((certificate, index) => (
+        <Reveal key={certificate.id} delay={index * 0.08}>
+          <CertificateCard certificate={certificate} />
+        </Reveal>
       ))}
     </div>
   );
