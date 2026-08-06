@@ -27,7 +27,7 @@ const HeroButtons = () => {
         </Button>
       </Link>
 
-      <a href="/cv.pdf" download target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+      <a href="/Adam Abiyu Febrisyam_CV.pdf" download target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
         <Button variant="secondary" className="w-full">
           Download CV
         </Button>

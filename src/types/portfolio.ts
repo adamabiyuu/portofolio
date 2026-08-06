@@ -6,6 +6,7 @@ export interface Project {
   technologies: string[];
   github: string;
   demo?: string;
+  demoVideo?: string;
 }
 
 export interface Certificate {

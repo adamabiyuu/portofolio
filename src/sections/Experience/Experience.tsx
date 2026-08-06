@@ -19,7 +19,7 @@ const Experience = () => {
         lg:py-28
       "
     >
-      <SectionTitle title="Experience" subtitle="My professional journey." />
+      <SectionTitle title="Experience"  />
 
       <div
         className="

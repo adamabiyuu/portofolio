@@ -215,6 +215,39 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               Live Demo
             </a>
           )}
+          {project.demoVideo && (
+            <a
+              href={project.demoVideo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                inline-flex
+                flex-1
+                items-center
+                justify-center
+                gap-2
+
+                rounded-xl
+
+                bg-sky-500
+
+                px-4
+                py-3
+
+                text-sm
+                font-medium
+                text-white
+
+                transition-all
+                duration-300
+
+                hover:bg-sky-600
+              "
+            >
+              <FaExternalLinkAlt size={12} />
+              Video Demo
+            </a>
+          )}
         </div>
       </div>
     </article>
