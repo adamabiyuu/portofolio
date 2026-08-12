@@ -10,7 +10,7 @@ export const projects: Project[] = [
     technologies: ["Go", "React", "TypeScript", "PostgreSQL", "Node.js"],
     github: "https://github.com/adamabiyuu/project-management",
     demo: "",
-    demoVideo: "belom ada",
+    demoVideo: "https://youtu.be/drE6vJrUPe4",
   },
   {
     id: 2,
