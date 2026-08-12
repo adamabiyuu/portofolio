@@ -16,7 +16,7 @@ const ContactInfo = () => {
         lg:gap-10
       "
     >
-      <ContactItem icon={FaEnvelope} title="Email" value="adamabiyuu@gmail.com" />
+      <ContactItem icon={FaEnvelope} title="Email" value="advmabiyu@gmail.com" />
 
       <ContactItem icon={FaLocationDot} title="Location" value="Jakarta, Indonesia" />
 
