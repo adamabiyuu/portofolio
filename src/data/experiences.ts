@@ -2,12 +2,22 @@ import type { Experience } from "@/types/experience";
 
 export const experiences: Experience[] = [
   {
+    id: 2,
+    year: "2026",
+    duration: "Agustus 2026 – Now",
+    company: "Saiket Systems",
+    position: "Frontend Web Developer Intern",
+    description:
+      "Developed responsive and interactive web applications using HTML, CSS, and JavaScript through hands-on projects, including blog layouts, product cards, quiz applications, To-Do List applications, and webpage clones. Implemented responsive designs, DOM manipulation, CRUD functionality, and JavaScript-based interactions while focusing on usability and cross-device compatibility.",
+  },
+  {
     id: 1,
     year: "2025",
     duration: "Agustus 2025 – September 2025",
     company: "Dinas Pendidikan Kota Cilegon",
-    position: "Intern - Frontend Developer",
-    description: "Developed a web-based application for managing student data, including features for data entry, retrieval, and reporting. Collaborated with a team of developers to implement responsive design and ensure cross-browser compatibility.",
+    position: "Frontend Web Developer Intern",
+    description:
+      "Developed a web-based application for managing student data, including features for data entry, retrieval, and reporting. Collaborated with a team of developers to implement responsive design and ensure cross-browser compatibility.",
   },
   // {
   //   id: 2,

@@ -44,6 +44,17 @@ export const projects: Project[] = [
     demo: "https://portfolio-tailwind-css-4.vercel.app/",
     demoVideo: "",
   },
+  {
+    id: 5,
+    title: "First Portofolio Website using Tailwind CSS",
+    description:
+      "My first portfolio website built with Tailwind CSS, showcasing my projects, skills, certifications, and professional experience. The website features a modern, responsive design with smooth navigation, dark mode support, and a clean user interface to provide an engaging user experience.",
+    image: "/projects/porto.png",
+    technologies: ["Tailwind CSS", "JavaScript", "HTML"],
+    github: "https://github.com/adamabiyuu/portfolio-tailwind-css-4",
+    demo: "https://portfolio-tailwind-css-4.vercel.app/",
+    demoVideo: "",
+  },
 ];
 
 export default projects;
