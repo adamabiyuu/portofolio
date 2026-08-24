@@ -9,10 +9,16 @@ export const techStack = [
     color: "text-sky-500",
   },
   {
+    name: "Golang",
+    icon: SiGo,
+    color: "text-cyan-500",
+  },
+  {
     name: "TypeScript",
     icon: SiTypescript,
     color: "text-blue-500",
   },
+
   {
     name: "JavaScript",
     icon: SiJavascript,
@@ -28,11 +34,7 @@ export const techStack = [
     icon: FaBootstrap,
     color: "text-purple-500",
   },
-  {
-    name: "Golang",
-    icon: SiGo,
-    color: "text-cyan-500",
-  },
+
   {
     name: "Node.js",
     icon: FaNodeJs,

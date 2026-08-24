@@ -61,7 +61,7 @@ const HeroContent = () => {
           md:text-2xl
         "
       >
-        Frontend Web Developer
+        Fullstack Developer
       </h2>
 
       {/* Description */}
@@ -76,7 +76,7 @@ const HeroContent = () => {
           sm:text-lg
         "
       >
-        I build modern, responsive, and high-performance web applications using React, TypeScript, Tailwind CSS, and other modern technologies with a strong focus on clean code and user experience.
+        I build modern, responsive, and high-performance web applications using React, Go, TypeScript, Tailwind CSS, and other modern technologies with a strong focus on clean code and user experience.
       </p>
 
       {/* Buttons */}
