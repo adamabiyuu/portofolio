@@ -25,13 +25,13 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "NexaFlow Landing Page",
+    title: "NexaFlow SaaS Landing Page",
     description:
-      "NexaFlow is a modern and responsive productivity platform landing page designed to showcase project management, team collaboration, and analytics features. The website includes an interactive navigation menu, responsive layouts, smooth section navigation, and contact form validation using JavaScript.",
+      "NexaFlow is a modern SaaS productivity platform landing page developed as part of my Front-End Development Internship at Saiket Systems. The project was initially built using HTML, CSS, and JavaScript, then further developed into a scalable React application using TypeScript and Tailwind CSS, featuring responsive design, interactive UI components, FAQ accordion, validated contact forms, testimonials, pricing sections, animations, and SEO optimization.",
     image: "/projects/nexaflow.png",
-    technologies: ["HTML5", "CSS3", "JavaScript"],
-    github: "https://github.com/adamabiyuu/Task-6-Clone-a-Webpage",
-    demo: "https://task-6-clone-a-webpage.vercel.app/",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Framer Motion", "React Hook Form"],
+    github: "https://github.com/adamabiyuu/nexaflow-react",
+    demo: "https://nexaflow-react.vercel.app/",
     demoVideo: "",
   },
   {
