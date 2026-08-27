@@ -8,7 +8,7 @@ export const experiences: Experience[] = [
     company: "Saiket Systems",
     position: "Frontend Web Developer Intern",
     description:
-      "Developed responsive and interactive web applications using React, TypeScript, HTML, and CSS, and JavaScript through hands-on projects, including blog layouts, product cards, quiz applications, To-Do List applications, and a modern SaaS landing page. Enhanced the final project using React with reusable components, responsive design, interactive UI elements, form validation, animations, and modern front-end development practices, while focusing on usability, maintainability, and cross-device compatibility.",
+      "Developed responsive and interactive web applications using React, TypeScript, Tailwind CSS, HTML, and CSS, and JavaScript through hands-on projects, including blog layouts, product cards, quiz applications, To-Do List applications, and a modern SaaS landing page. Enhanced the final project using React with reusable components, responsive design, interactive UI elements, form validation, animations, and modern front-end development practices, while focusing on usability, maintainability, and cross-device compatibility.",
   },
   {
     id: 1,
