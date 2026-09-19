@@ -2,6 +2,15 @@ import type { Experience } from "@/types/experience";
 
 export const experiences: Experience[] = [
   {
+    id: 3,
+    year: "2026",
+    duration: "September 2026 – October 2026",
+    company: "Singapore Intercultural School (SIS) Cilegon",
+    position: "IT Intern",
+    description:
+      "IT Intern at Singapore Intercultural School (SIS) Cilegon September 2026 – October 2026. Assisted the IT teacher in supporting classroom activities, IT-related lessons, and practical sessions for students. Supported various school IT activities, including preparing learning materials, organizing and labeling iPads and laptops, assisting with laboratory equipment, and helping with technology-related administrative tasks. Collaborated with teachers and staff to ensure IT equipment and resources were properly prepared and available for daily learning activities, while gaining practical experience in educational technology, device management, and IT operations within a school environment.",
+  },
+  {
     id: 2,
     year: "2026",
     duration: "August 2026 – September 2026",
