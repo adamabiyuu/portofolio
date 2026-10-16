@@ -6,7 +6,7 @@ export const experiences: Experience[] = [
     year: "2026",
     duration: "September 2026 – Present",
     company: "Singapore Intercultural School (SIS) Cilegon",
-    position: "IT Teaching Assistant Intern",
+    position: "IT Intern",
     description:
       "Assisted the IT teacher in delivering IT lessons and supporting classroom activities across Primary and Secondary levels. Helped teach ScratchJr for introductory programming, Tinkercad for 3D modeling for students from Primary 4 to Secondary 2, and TypingClub to develop typing skills for students from Primary 1 to Primary 4. Supported lesson preparation, student learning activities, and hands-on technology sessions. Managed and organized IT equipment, including labeling iPads and laptops, preparing laboratory devices, and ensuring technology resources were ready for daily classroom use. Collaborated with teachers and school staff to support educational technology integration, classroom management, and IT-related administrative tasks.",
   },
