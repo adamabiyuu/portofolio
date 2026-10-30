@@ -2,6 +2,15 @@ import type { Experience } from "@/types/experience";
 
 export const experiences: Experience[] = [
   {
+    id: 4,
+    year: "2026",
+    duration: "October 2026 – Present",
+    company: "Mahreen Indonesia",
+    position: "Frontend Web Developer Intern",
+    description:
+      "Developed and maintained frontend features using React.js, TypeScript, and Tailwind CSS. Improved product data consistency and navigation by integrating frontend pages with shared public APIs and ensuring accurate product retrieval through API-recognized slugs. Collaborated with UI/UX designers and backend developers to resolve integration issues, followed team Git workflows and development standards, and served as PIC of the Frontend Intern division by coordinating tasks, facilitating team communication, and monitoring development progress.",
+  },
+  {
     id: 3,
     year: "2026",
     duration: "September 2026 – Present",
