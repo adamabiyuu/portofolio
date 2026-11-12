@@ -2,7 +2,7 @@ import { techStack } from "@/data/techStack";
 
 const TechStack = () => {
   return (
-    <div className="mt-14">
+    <div className="mt-7">
       <p className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Tech Stack</p>
 
       <div className="flex flex-wrap gap-5">

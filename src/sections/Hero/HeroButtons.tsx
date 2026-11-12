@@ -6,7 +6,7 @@ const HeroButtons = () => {
   return (
     <div
       className="
-        mt-10
+        mt-5
         flex
         w-full
         flex-col
@@ -23,11 +23,11 @@ const HeroButtons = () => {
 
       <Link to="portfolio" smooth duration={500} offset={-80} className="w-full sm:w-auto">
         <Button variant="secondary" className="w-full">
-          View Portfolio
+          Portfolio
         </Button>
       </Link>
 
-      <a href="/Adam Abiyu Febrisyam_CV.pdf" download target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+      <a href="/Adam Abiyu Febrisyam_CV.pdf" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
         <Button variant="secondary" className="w-full">
           Download CV
         </Button>

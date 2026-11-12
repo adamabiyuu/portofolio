@@ -7,245 +7,95 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
+  const demoUrl = project.demo || project.demoVideo;
+  const demoLabel = project.demo ? "Live Demo" : "Video Demo";
+
   return (
     <article
       className="
         group
-
         flex
         h-full
+        min-h-[560px]
+        min-w-0
         flex-col
-
         overflow-hidden
-
         rounded-2xl
-
         border
         border-slate-800
-
-        bg-slate-900/50
-        backdrop-blur-sm
-
-        shadow-lg
-
+        bg-slate-950
         transition-all
         duration-300
-
-        hover:-translate-y-2
-        hover:border-sky-500/40
-        hover:shadow-sky-500/10
+        hover:-translate-y-1
+        hover:border-sky-500/50
+        hover:shadow-xl
+        hover:shadow-sky-500/5
       "
     >
-      {/* Image */}
-      <div
-        className="
-          aspect-video
-          overflow-hidden
-          bg-slate-800
-        "
-      >
-        <img
-          src={project.image}
-          alt={project.title}
-          loading="lazy"
-          decoding="async"
-          className="
-            h-full
-            w-full
-            object-cover
+      {/* Card Header */}
+      <div className="flex items-center justify-between border-b border-slate-800 px-5 py-4 sm:px-6">
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">Project</p>
 
-            transition-transform
-            duration-500
-
-            group-hover:scale-105
-          "
-        />
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`View ${project.title} source code`}
+          className="rounded-full border border-slate-700 p-2 text-slate-400 transition-all duration-300 hover:border-sky-500 hover:text-sky-400"
+        >
+          <FaExternalLinkAlt size={15} />
+        </a>
       </div>
 
-      {/* Content */}
-      <div
-        className="
-          flex
-          flex-1
-          flex-col
+      {/* Card Visual */}
+      <div className="relative aspect-video shrink-0 overflow-hidden bg-slate-900">
+        <div className="absolute inset-0 z-10 bg-gradient-to-br from-sky-500/10 via-transparent to-purple-500/10" />
 
-          p-5
+        <img src={project.image} alt={project.title} loading="lazy" decoding="async" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
 
-          sm:p-6
-        "
-      >
+        <span className="absolute bottom-4 left-4 z-20 rounded-full border border-slate-700 bg-slate-950/90 px-3 py-1 text-xs font-medium text-slate-300 backdrop-blur">Featured Project</span>
+      </div>
+
+      {/* Card Information */}
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
         <div>
-          <h3
-            className="
-              text-xl
-              font-semibold
+          <h3 className="line-clamp-2 min-h-[3.5rem] text-xl font-bold text-white transition-colors duration-300 group-hover:text-sky-400">{project.title}</h3>
 
-              text-white
-            "
-          >
-            {project.title}
-          </h3>
-
-          <p
-            className="
-              mt-3
-
-              text-sm
-              leading-7
-
-              text-slate-300
-            "
-          >
-            {project.description}
-          </p>
+          <p className="mt-3 line-clamp-4 min-h-[7rem] text-sm leading-7 text-slate-400">{project.description}</p>
         </div>
 
-        {/* Tech */}
-        <div
-          className="
-            mt-6
-            flex
-            flex-wrap
-            gap-2
-          "
-        >
-          {project.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="
-                rounded-full
-
-                border
-                border-sky-500/20
-
-                bg-sky-500/10
-
-                px-3
-                py-1
-
-                text-xs
-                font-medium
-
-                text-sky-400
-              "
-            >
-              {tech}
-            </span>
-          ))}
+        {/* Technologies */}
+        <div className="mt-5 min-h-[3.5rem]">
+          <div className="flex flex-wrap gap-2">
+            {project.technologies.map((tech) => (
+              <span key={tech} className="rounded-lg border border-slate-800 bg-slate-900 px-2.5 py-1 text-xs font-medium text-slate-300">
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
 
-        {/* Buttons */}
-        <div
-          className="
-            mt-auto
-
-            flex
-            flex-col
-
-            gap-3
-
-            pt-6
-
-            sm:flex-row
-          "
-        >
+        {/* Card Actions */}
+        <div className="mt-auto grid grid-cols-2 gap-2 pt-6">
           <a
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="
-              inline-flex
-              flex-1
-              items-center
-              justify-center
-              gap-2
-
-              rounded-xl
-
-              border
-              border-slate-700
-
-              px-4
-              py-3
-
-              text-sm
-              font-medium
-
-              transition-all
-              duration-300
-
-              hover:border-sky-500/40
-              hover:bg-slate-800
-            "
+            className="inline-flex min-h-11 min-w-0 items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-slate-700 px-2 py-3 text-xs font-semibold text-slate-200 transition-all duration-300 hover:border-sky-500 hover:bg-slate-900 hover:text-sky-400 sm:text-sm"
           >
-            <FaGithub />
+            <FaGithub size={15} />
             Source Code
           </a>
 
-          {project.demo && (
+          {demoUrl && (
             <a
-              href={project.demo}
+              href={demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="
-                inline-flex
-                flex-1
-                items-center
-                justify-center
-                gap-2
-
-                rounded-xl
-
-                bg-sky-500
-
-                px-4
-                py-3
-
-                text-sm
-                font-medium
-                text-white
-
-                transition-all
-                duration-300
-
-                hover:bg-sky-600
-              "
+              className="inline-flex min-h-11 min-w-0 items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-sky-500 px-2 py-3 text-xs font-semibold text-white transition-all duration-300 hover:bg-sky-600 sm:text-sm"
             >
               <FaExternalLinkAlt size={12} />
-              Live Demo
-            </a>
-          )}
-          {project.demoVideo && (
-            <a
-              href={project.demoVideo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                inline-flex
-                flex-1
-                items-center
-                justify-center
-                gap-2
-
-                rounded-xl
-
-                bg-sky-500
-
-                px-4
-                py-3
-
-                text-sm
-                font-medium
-                text-white
-
-                transition-all
-                duration-300
-
-                hover:bg-sky-600
-              "
-            >
-              <FaExternalLinkAlt size={12} />
-              Video Demo
+              {demoLabel}
             </a>
           )}
         </div>

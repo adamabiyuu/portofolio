@@ -51,7 +51,7 @@ const HeroContent = () => {
       {/* Job */}
       <h2
         className="
-          mt-5
+          mt-1
           text-lg
           font-semibold
           text-slate-400
@@ -67,7 +67,7 @@ const HeroContent = () => {
       {/* Description */}
       <p
         className="
-          mt-6
+          mt-3
           max-w-xl
           text-base
           leading-8
@@ -76,7 +76,7 @@ const HeroContent = () => {
           sm:text-lg
         "
       >
-        I build modern, responsive, and high-performance web applications using React, Go, TypeScript, Tailwind CSS, and other modern technologies with a strong focus on clean code and user experience.
+        I build modern, responsive, and high-performance web applications with a strong focus on clean code and user experience.
       </p>
 
       {/* Buttons */}

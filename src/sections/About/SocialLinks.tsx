@@ -12,7 +12,6 @@ const SocialLinks = () => {
         justify-center
         gap-4
 
-        lg:justify-start
       "
     >
       {socialLinks.map((social) => {

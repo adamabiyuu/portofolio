@@ -1,16 +1,14 @@
 import { useState } from "react";
+
 import Reveal from "@/components/animations/Reveal";
 import { certificates } from "@/data/certificates";
-import CertificateCard from "./CertificateCard";
 
-const CERTIFICATE_LIMIT = 4;
+import CertificateCard from "./CertificateCard";
 
 const CertificateGrid = () => {
   const [showAll, setShowAll] = useState(false);
 
-  const hasMoreCertificates = certificates.length > CERTIFICATE_LIMIT;
-
-  const displayedCertificates = showAll ? certificates : certificates.slice(0, CERTIFICATE_LIMIT);
+  const hasMoreCertificates = certificates.length > 2;
 
   return (
     <>
@@ -19,14 +17,16 @@ const CertificateGrid = () => {
           grid
           grid-cols-1
           gap-6
+          sm:grid-cols-3
           sm:gap-8
-          lg:grid-cols-2
         "
       >
-        {displayedCertificates.map((certificate, index) => (
-          <Reveal key={certificate.id} delay={index * 0.08}>
-            <CertificateCard certificate={certificate} />
-          </Reveal>
+        {certificates.map((certificate, index) => (
+          <div key={certificate.id} className={!showAll ? "hidden [&:nth-child(-n+2)]:block sm:[&:nth-child(-n+3)]:block" : "block"}>
+            <Reveal delay={index * 0.08}>
+              <CertificateCard certificate={certificate} />
+            </Reveal>
+          </div>
         ))}
       </div>
 
@@ -59,34 +59,3 @@ const CertificateGrid = () => {
 };
 
 export default CertificateGrid;
-// import Reveal from "@/components/animations/Reveal";
-
-// import { certificates } from "@/data/certificates";
-
-// import CertificateCard from "./CertificateCard";
-
-// const CertificateGrid = () => {
-//   return (
-//     <div
-//       className="
-//         grid
-
-//         grid-cols-1
-
-//         gap-6
-
-//         sm:gap-8
-
-//         lg:grid-cols-2
-//       "
-//     >
-//       {certificates.map((certificate, index) => (
-//         <Reveal key={certificate.id} delay={index * 0.08}>
-//           <CertificateCard certificate={certificate} />
-//         </Reveal>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default CertificateGrid;
