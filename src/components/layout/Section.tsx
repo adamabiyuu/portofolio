@@ -16,27 +16,19 @@ const Section = forwardRef<HTMLElement, SectionProps>(({ id, children, className
             w-full
             scroll-mt-24
             px-5
-            py-16
+            py-10
 
             sm:px-6
-            sm:py-20
+            sm:py-12
 
             lg:px-8
-            lg:py-24
+            lg:py-16
           `,
         className,
       )}
       {...props}
     >
-      <div
-        className="
-            mx-auto
-            w-full
-            max-w-7xl
-          "
-      >
-        {children}
-      </div>
+      <div className="mx-auto w-full max-w-7xl">{children}</div>
     </section>
   );
 });

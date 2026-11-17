@@ -10,17 +10,7 @@ const Contact = () => {
   const ref = useSectionObserver("contact");
 
   return (
-    <Section
-      ref={ref}
-      id="contact"
-      className="
-        py-20
-
-        sm:py-24
-
-        lg:py-28
-      "
-    >
+    <Section ref={ref} id="contact">
       <SectionTitle title="Contact" subtitle="Let's build something together." />
 
       <div

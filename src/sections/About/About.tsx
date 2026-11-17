@@ -10,7 +10,7 @@ const About = () => {
   const ref = useSectionObserver("about");
 
   return (
-    <Section ref={ref} id="about" className="py-24 sm:py-28">
+    <Section ref={ref} id="about">
       <SectionTitle title="About Me" subtitle="Get to know me better." />
 
       <div className="mt-16 flex justify-center">
