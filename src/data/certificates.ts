@@ -30,7 +30,14 @@ export const certificates: Certificate[] = [
     credential: "https://drive.google.com/file/d/1aKxmSsYIXAvD3-Mo8gRALDrn1wQzASad/view",
   },
   {
-    id: 5,
+    id: 6,
+    title: "BUILD 2026 – Event Committee (Technical Team)",
+    issuer: "Mahreen Indonesia",
+    image: "/certificates/build_2026.png",
+    credential: "https://drive.google.com/file/d/17cZyxwMsLBoU5OFmMpDQOiBbPIc-ySpl/view",
+  },
+  {
+    id: 6,
     title: "Speak Up 1 Class",
     issuer: "Mr. Bob Kampung Inggris",
     image: "/certificates/speak_up_1.png",
