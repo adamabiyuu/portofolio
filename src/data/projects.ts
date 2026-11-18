@@ -36,6 +36,18 @@ export const projects: Project[] = [
   },
   {
     id: 4,
+    title: "Willy's Personal Portfolio Website",
+    description:
+      "A modern and responsive personal portfolio website developed to showcase professional identity, skills, projects, and experience. Built using React, TypeScript, and Tailwind CSS, featuring a clean user interface, dark mode, interactive navigation, animated hero section with typewriter effects, responsive layouts, project showcase, and contact section.",
+    image: "/projects/willy-portfolio.png",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Framer Motion", "Lucide React", "EmailJS"],
+    github: "https://github.com/adamabiyuu/willy-portfolio",
+    demo: "https://willy-portfolio-xi.vercel.app/",
+    demoVideo: "",
+  },
+
+  {
+    id: 5,
     title: "Prestige Palace Residence Web Application",
     description: "Prestige Palace Residence is a modern property marketing website that showcases quality homes, complete facilities, strategic locations, and the latest residential information to help you find your dream home.",
     image: "/projects/prestige-palace.png",
@@ -45,7 +57,7 @@ export const projects: Project[] = [
     demoVideo: "",
   },
   {
-    id: 5,
+    id: 6,
     title: "First Portofolio Website using Tailwind CSS",
     description:
       "My first portfolio website built with Tailwind CSS, showcasing my projects, skills, certifications, and professional experience. The website features a modern, responsive design with smooth navigation, dark mode support, and a clean user interface to provide an engaging user experience.",
