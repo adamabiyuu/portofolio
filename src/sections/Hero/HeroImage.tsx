@@ -1,4 +1,5 @@
 import profile from "@/assets/images/profile.png";
+import backProfile from "@/assets/images/back-profile.png";
 import Lanyard from "@/components/Lanyard";
 import strapGeometric from "@/assets/images/strap-geometric.png";
 
@@ -39,7 +40,7 @@ const HeroImage = () => {
         {/* 3D Lanyard */}
         <Lanyard
           frontImage={profile}
-          backImage={profile}
+          backImage={backProfile}
           strapImage={strapGeometric}
           strapColor="#071B3D"
           orientation="portrait"
